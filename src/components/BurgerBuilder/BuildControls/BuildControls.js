@@ -1,5 +1,5 @@
 import React from 'react'
-import BuildControlsItems from './BuildControlsItems/BuildControlsItems'
+import BuildControl from './BuildControl/BuildControl'
 
 
 const buildControls = () => {
@@ -7,7 +7,7 @@ const buildControls = () => {
     return (
         <div>
             <p>Total Price</p>
-            <BuildControlsItems />
+            <BuildControl />
             <button>Order Now</button>
         </div>
     )

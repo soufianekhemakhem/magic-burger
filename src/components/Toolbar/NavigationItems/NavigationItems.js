@@ -1,13 +1,15 @@
 import React from 'react'
+import NavigationItem from './NavigationItem/NavigationItem'
+import classes from './NavigationItems.module.css'
 
 
 const navigationItems = () => {
 
     return (
-        <div>
-            <p>navigation Item</p>
-            <p>navigation Item</p>
-        </div>
+        <ul className={classes.NavigationItems}>
+            <NavigationItem name='BurgerBuilder' activeItem />
+            <NavigationItem name='Checkout' />
+        </ul>
     )
 }
 

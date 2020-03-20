@@ -6,6 +6,7 @@ import classes from './Burger.module.css'
 const burger = (props) => {
 
     let ingredientsList = []
+
     // for (let i = 0; i < ingredients.length; i++) {
     //     let item = ingredients[i]
 
@@ -16,9 +17,18 @@ const burger = (props) => {
         }
     }
 
+    // let message = <p>Please start adding ingredients ! </p>
+    // if (ingredientsList.length > 0) {
+    //     message = null
+    // }
+
+    let message = ingredientsList.length > 0 ? null : <p>Please start adding ingredients ! </p>
+
     return (
         <div className={classes.Burger}>
             <Ingredient type='BreadTop' />
+
+            {message}
 
             {ingredientsList}
 

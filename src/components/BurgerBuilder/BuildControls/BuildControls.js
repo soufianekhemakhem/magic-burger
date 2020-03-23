@@ -26,7 +26,7 @@ const buildControls = (props) => {
 
             {ingredientsControls}
 
-            <button className={classes.OrderButton}>Order Now</button>
+            <button className={classes.OrderButton} onClick={props.showOrHideSummary}>Order Now</button>
         </div>
     )
 }

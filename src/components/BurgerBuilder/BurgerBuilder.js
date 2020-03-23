@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Burger from './Burger/Burger'
 import BuildControls from './BuildControls/BuildControls'
-// import Modal from './Modal/Modal'
+import Modal from './Modal/Modal'
+import OrderSummary from './OrderSummary/OrderSummary'
+
 
 class burgerBuilder extends Component {
 
@@ -36,7 +38,8 @@ class burgerBuilder extends Component {
                 maxCount: 2
             }
         ],
-        totalPrice: 5
+        totalPrice: 5,
+        ordered: false
 
     }
 
@@ -79,6 +82,12 @@ class burgerBuilder extends Component {
     //     })
     // }
 
+    showOrHideSummaryHandler = () => {
+        this.setState({
+            ordered: !this.state.ordered
+        })
+
+    }
 
     render() {
         return (
@@ -89,9 +98,13 @@ class burgerBuilder extends Component {
                     totalPrice={this.state.totalPrice}
                     ingredients={this.state.ingredients}
                     addOrRemoveIngredient={this.addOrRemoveIngredientHandler}
+                    showOrHideSummary={this.showOrHideSummaryHandler}
                 // removeIngredient={this.removeIngredientHandler}
                 />
-                {/* <Modal /> */}
+                <Modal show={this.state.ordered}>
+                    {/* <p> Hello world! </p> */}
+                    <OrderSummary />
+                </Modal>
             </div>
         )
     }

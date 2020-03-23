@@ -10,7 +10,7 @@ import classes from './NavigationItem.module.css'
 //     }
 // }
 
-// Lign 5 to 11 can be written in lign 18 inside className
+// Lign 5 to 11 can be written in lign 19 inside className
 // condition ? valeur1 : valeur2
 
 const navigationItem = (props) => {

@@ -101,9 +101,16 @@ class burgerBuilder extends Component {
                     showOrHideSummary={this.showOrHideSummaryHandler}
                 // removeIngredient={this.removeIngredientHandler}
                 />
-                <Modal show={this.state.ordered}>
+                <Modal
+                    show={this.state.ordered}
+                    showOrHideSummary={this.showOrHideSummaryHandler}
+                >
                     {/* <p> Hello world! </p> */}
-                    <OrderSummary />
+                    <OrderSummary
+                        totalPrice={this.state.totalPrice}
+                        ingredients={this.state.ingredients}
+                        showOrHideSummary={this.showOrHideSummaryHandler}
+                    />
                 </Modal>
             </div>
         )

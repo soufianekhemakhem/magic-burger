@@ -20,6 +20,10 @@ const buildControls = (props) => {
         )
     }
 
+
+    console.log('[BuildControls.js] rendering')
+
+
     return (
         <div className={classes.BuildControls}>
             <p>Total Price : {props.totalPrice} DT</p>

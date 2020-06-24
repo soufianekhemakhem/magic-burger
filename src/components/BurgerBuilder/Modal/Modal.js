@@ -20,6 +20,10 @@ const modal = (props) => {
     //     </div>
     // )
 
+
+    console.log('[Modal.js] rendering')
+
+
     return (
         <div>
             {props.show ? <Backdrop showOrHideSummary={props.showOrHideSummary} /> : null}

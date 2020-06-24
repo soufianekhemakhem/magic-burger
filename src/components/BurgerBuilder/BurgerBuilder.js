@@ -7,41 +7,82 @@ import OrderSummary from './OrderSummary/OrderSummary'
 
 class burgerBuilder extends Component {
 
-    state = {
-        ingredients: [
-            {
-                id: 1,
-                label: 'Salad',
-                count: 0,
-                price: 1.5,
-                maxCount: 2
-            },
-            {
-                id: 2,
-                label: 'Cheese',
-                count: 0,
-                price: 1,
-                maxCount: 3
-            },
-            {
-                id: 3,
-                label: 'Meat',
-                count: 0,
-                price: 2.5,
-                maxCount: 2
-            },
-            {
-                id: 4,
-                label: 'Escalope',
-                count: 0,
-                price: 2,
-                maxCount: 2
-            }
-        ],
-        totalPrice: 5,
-        ordered: false
+    constructor(props) {
+        console.log('[BurgerBuilder.js] constructor')
 
+        super(props)
+        this.state = {
+            ingredients: [
+                {
+                    id: 1,
+                    label: 'Salad',
+                    count: 0,
+                    price: 1.5,
+                    maxCount: 2
+                },
+                {
+                    id: 2,
+                    label: 'Cheese',
+                    count: 0,
+                    price: 1,
+                    maxCount: 3
+                },
+                {
+                    id: 3,
+                    label: 'Meat',
+                    count: 0,
+                    price: 2.5,
+                    maxCount: 2
+                },
+                {
+                    id: 4,
+                    label: 'Escalope',
+                    count: 0,
+                    price: 2,
+                    maxCount: 2
+                }
+            ],
+            totalPrice: 5,
+            ordered: false
+
+        }
     }
+
+    // state = {
+    //     ingredients: [
+    //         {
+    //             id: 1,
+    //             label: 'Salad',
+    //             count: 0,
+    //             price: 1.5,
+    //             maxCount: 2
+    //         },
+    //         {
+    //             id: 2,
+    //             label: 'Cheese',
+    //             count: 0,
+    //             price: 1,
+    //             maxCount: 3
+    //         },
+    //         {
+    //             id: 3,
+    //             label: 'Meat',
+    //             count: 0,
+    //             price: 2.5,
+    //             maxCount: 2
+    //         },
+    //         {
+    //             id: 4,
+    //             label: 'Escalope',
+    //             count: 0,
+    //             price: 2,
+    //             maxCount: 2
+    //         }
+    //     ],
+    //     totalPrice: 5,
+    //     ordered: false
+
+    // }
 
     addOrRemoveIngredientHandler = (id, action) => { //we use id instead of using label
         let newIngredients = [...this.state.ingredients]
@@ -89,7 +130,13 @@ class burgerBuilder extends Component {
 
     }
 
+    componentDidMount = () => {
+        console.log('[BurgerBuilder.js] DidMount')
+    }
+
     render() {
+        console.log('[BurgerBuilder.js] render')
+
         return (
             <div>
                 <Burger ingredients={this.state.ingredients} />

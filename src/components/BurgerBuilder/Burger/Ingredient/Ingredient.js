@@ -4,6 +4,8 @@ import classes from './Ingredient.module.css'
 
 const ingredient = (props) => {
 
+    console.log('[Ingredient.js] rendering')
+
     let ingredientElement
 
     switch (props.type) {

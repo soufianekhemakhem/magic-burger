@@ -34,7 +34,7 @@ const orderSummary = (props) => {
             <p> Continue to checkout ?</p>
 
             <button className={classes.Button + ' ' + classes.Danger} onClick={props.showOrHideSummary}> Cancel</button>
-            <button className={classes.Button + ' ' + classes.Success}>  Continue</button>
+            <button className={classes.Button + ' ' + classes.Success} onClick={props.sendOrder}>  Continue</button>
 
         </div>
     )

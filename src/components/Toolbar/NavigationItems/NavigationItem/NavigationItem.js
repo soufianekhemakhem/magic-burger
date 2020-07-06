@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './NavigationItem.module.css'
-
+import { Link } from 'react-router-dom'
 
 // const setActive = (activeItem) => {
 //     if (activeItem) {
@@ -16,9 +16,9 @@ import classes from './NavigationItem.module.css'
 const navigationItem = (props) => {
     return (
         <li className={classes.NavigationItem}>
-            <a href='/' className={props.activeItem ? classes.active : null}>
+            <Link to={props.path} className={props.activeItem ? classes.active : null}>
                 {props.name}
-            </a>
+            </Link>
         </li>
     )
 }

@@ -163,7 +163,7 @@ class burgerBuilder extends Component {
         // The 4 ligns upper to this are redundant need because no need to put setState inside DidMount
         // Only in asynchrone blocks like axios 
 
-        axios.get('http://react-training-server.herokuapp.com/ingredents')
+        axios.get('http://react-training-server.herokuapp.com/ingredients')
             .then((response) => {
                 console.log(response);
                 this.setState({
@@ -200,7 +200,7 @@ class burgerBuilder extends Component {
                     <div style={{ display: 'flex' }}>
                         <h3 style={{ width: '80%' }}> Fetching data from server .. </h3>
                         <img
-                            style={{ width: '60px', height: '60px' }}
+                            style={{ width: '90px', height: '90px' }}
                             src={loadingGif} alt='loading..' />
                     </div>
                     <div> {this.state.errorMessage} </div>

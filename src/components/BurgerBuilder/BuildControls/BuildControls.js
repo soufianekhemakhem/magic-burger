@@ -10,7 +10,7 @@ const buildControls = (props) => {
         ingredientsControls.push(
             <BuildControl
                 label={item.label}
-                key={item.id}
+                key={item._id}
                 added={() => { props.addOrRemoveIngredient(item.id, 'add') }}
                 removed={() => { props.addOrRemoveIngredient(item.id, 'remove') }}
                 // disableRemoving={item.count === 0 ? true : false}

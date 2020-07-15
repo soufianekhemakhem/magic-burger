@@ -163,13 +163,20 @@ class burgerBuilder extends Component {
         // The 4 ligns upper to this are redundant need because no need to put setState inside DidMount
         // Only in asynchrone blocks like axios 
 
-        axios.get('http://react-training-server.herokuapp.com/ingredients')
+        axios.get('http://localhost:3000/ingredients')
             .then((response) => {
+
                 console.log(response);
+
+                const ingredients = response.data.map(item => {
+                    item.count = 0
+                    return item
+                })
+
                 this.setState({
-                    ingredients: response.data.ingredients,
                     showModal: false,
-                    isLoading: false
+                    isLoading: false,
+                    ingredients
                 })
             })
             .catch((error) => {
